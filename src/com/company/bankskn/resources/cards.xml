@@ -1,0 +1,26 @@
+<cards>
+    <card>
+        <cardnumber>123456789</cardnumber>
+        <cardbrand>VISA</cardbrand>
+        <currency>USD</currency>
+        <issuerbank>AMERIA</issuerbank>
+        <cardholder>GOR GRIGORYAN</cardholder>
+        <expiredate>25/12/20</expiredate>
+    </card>
+    <card>
+        <cardnumber>123456790</cardnumber>
+        <cardbrand>MASTER</cardbrand>
+        <currency>AMD</currency>
+        <issuerbank>AMERIA</issuerbank>
+        <cardholder>GOR GRIGORYAN</cardholder>
+        <expiredate>25/12/21</expiredate>
+    </card>
+    <card>
+        <cardnumber>12345672</cardnumber>
+        <cardbrand>AMEX</cardbrand>
+        <currency>EURO</currency>
+        <issuerbank>HSBC</issuerbank>
+        <cardholder>HAKOB VARDANYAN</cardholder>
+        <expiredate>11/11/20</expiredate>
+    </card>
+</cards>
