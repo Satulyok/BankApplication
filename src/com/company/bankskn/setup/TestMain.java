@@ -35,6 +35,8 @@ public class TestMain {
                             System.out.println("Withdrawing money from second Thread");
                             long newAmount = atmService.withdrawSecond(card, amountToWithdraw);
                             System.out.println("(Second Thread)Balance in your account is:  " + newAmount);
+                            if(newAmount == 0)
+                                break;
                         }
                     }
                     catch (InterruptedException e) {
@@ -55,6 +57,8 @@ public class TestMain {
                             System.out.println("Withdrawing money from first Thread");
                             long newAmount = atmService.withdrawFirst(card, amountToWithdraw);
                             System.out.println("(First Thread)Balance in your account is:  " + newAmount);
+                            if(newAmount == 0)
+                                break;
                         }
                     }catch (InterruptedException e) {
                         e.printStackTrace();
