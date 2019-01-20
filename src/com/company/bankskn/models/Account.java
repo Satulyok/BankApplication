@@ -21,8 +21,8 @@ public class Account {
         return amount;
     }
 
-    public void setAmount(long amount) {
-        this.amount = amount;
+    public void withrawAmount(long amount) {
+        this.amount -= amount;
     }
 
     @Override

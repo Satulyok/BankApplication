@@ -7,4 +7,9 @@ public class ATM {
     public long getBalance() {
         return balance;
     }
+
+    public long withraw(long amount) {
+        balance -= amount;
+        return balance;
+    }
 }

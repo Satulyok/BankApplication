@@ -16,6 +16,7 @@ public class ATMService {
     private BankManagerImpl bankManagerImpl;
     private ATMManagerImpl atmManagerImpl;
     private ATM atm = new ATM();
+    private boolean isFinished = true;
 
     public ATMService (BankManagerImpl bankManagerImpl, ATMManagerImpl atmManagerImpl) {
         this.bankManagerImpl = bankManagerImpl;
@@ -26,9 +27,10 @@ public class ATMService {
         try {
             if (bankManagerImpl.isGetMoney(card, amount)) {
                 if (atmManagerImpl.checkATMBalance(atm, amount)) {
-                    atmManagerImpl.reduceATMBalance(atm, amount);
+                    bankManagerImpl.withrawFromAccount(card,amount);
+                    atmManagerImpl.withdrawFromATM(atm, amount);
                     Logger.logMessage("Transaction was successful!");
-                    return amount;
+                    return bankManagerImpl.getBalance(card);
                 }
                 else {
                     throw new LowATMBalanceException("Low ATM Balance!");
@@ -48,15 +50,35 @@ public class ATMService {
         return 0;
     }
 
-//    public long seeBalance(Card card, long amount) {
-//        try {
-//            return bankManagerImpl.getBalance(card, withdraw(card, amount));
-//        } catch (LowAccountBalanceException e) {
-//            e.printStackTrace();
-//        } catch (InvalidAccountException e) {
-//            e.printStackTrace();
-//        }
-//        return 0;
-//    }
+    public long withdrawFirst(Card card, long amount) throws InterruptedException {
+        synchronized (this)
+        {
+            // producer thread waits while list
+            // is full
+            while (isFinished)
+                wait();
+            long a = withdraw(card,amount);
 
+            Thread.sleep(1000);
+            isFinished = true;
+            notify();
+            return a;
+        }
+    }
+
+    public long withdrawSecond(Card card, long amount) throws InterruptedException {
+        synchronized (this)
+        {
+            // producer thread waits while list
+            // is full
+            while (!isFinished)
+                wait();
+            long a = withdraw(card,amount);
+
+            Thread.sleep(1000);
+            isFinished = false;
+            notify();
+            return a;
+        }
+    }
 }

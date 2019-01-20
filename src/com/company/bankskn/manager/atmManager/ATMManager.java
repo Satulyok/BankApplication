@@ -7,5 +7,5 @@ public interface ATMManager {
 
     boolean checkATMBalance(ATM atm, long amount) throws LowATMBalanceException;
 
-    long reduceATMBalance(ATM atm, long amount) throws LowATMBalanceException;
+    long withdrawFromATM(ATM atm, long amount) throws LowATMBalanceException;
 }
