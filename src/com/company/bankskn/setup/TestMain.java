@@ -17,18 +17,18 @@ public class TestMain {
 
     public static void main(String[] args) throws LowAccountBalanceException, InvalidAccountException, IOException {
         Card card = GenerateRandomCard.getCard();
-        Logger.logMessage("----------------------------------------------------");
+        System.out.println("----------------------------------------------------");
         ATMService atmService = new ATMService(new BankManagerImpl(), new ATMManagerImpl());
         java.util.Scanner input = new java.util.Scanner(System.in);
         try {
-            Logger.logMessage("Please enter the amount to withdraw:");
+            System.out.println("Please enter the amount to withdraw:");
             Integer amountToWithdraw = input.nextInt();
             long amount = atmService.withdraw(card, amountToWithdraw);
             BankManagerImpl bankManagerImpl  = new BankManagerImpl();
             long newAmount = bankManagerImpl.getBalance(card, amount);
-            Logger.logMessage("Balance in your account is:  " + newAmount);
+            System.out.println("Balance in your account is:  " + newAmount);
         } catch (InputMismatchException e) {
-            Logger.logMessage("Enter valid PIN code.");
+            System.out.println("Enter valid PIN code.");
         }
     }
 }

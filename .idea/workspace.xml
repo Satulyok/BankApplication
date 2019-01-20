@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5048ddc9-0358-45a3-94a6-d3c6e8a351d8" name="Default Changelist" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com.company.bankskn.logger.AccountLogger.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com.company.bankskn.logger.AccountLogger.log.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com.company.bankskn.logger.Logger.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com.company.bankskn.logger.Logger.log.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BankSKN/com/company/bankskn/logger/LauncherLogger.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/bankskn/logger/LauncherLogger.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BankSKN/com/company/bankskn/card/GenerateRandomCard.class" afterPath="$PROJECT_DIR$/out/production/BankSKN/com/company/bankskn/card/GenerateRandomCard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BankSKN/com/company/bankskn/setup/TestMain.class" afterPath="$PROJECT_DIR$/out/production/BankSKN/com/company/bankskn/setup/TestMain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/bankskn/card/GenerateRandomCard.java" afterPath="$PROJECT_DIR$/src/com/company/bankskn/card/GenerateRandomCard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/bankskn/setup/TestMain.java" afterPath="$PROJECT_DIR$/src/com/company/bankskn/setup/TestMain.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -87,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestMain.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/bankskn/setup/TestMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+            <state relative-caret-position="270">
+              <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -121,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Logger.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Logger.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/bankskn/logger/Logger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+            <state relative-caret-position="570">
+              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -189,8 +179,8 @@
         <option value="$PROJECT_DIR$/src/com/company/bankskn/logger/AccountLogger.java" />
         <option value="$PROJECT_DIR$/src/com/company/bankskn/service/ATMService.java" />
         <option value="$PROJECT_DIR$/src/com/company/bankskn/logger/Logger.java" />
-        <option value="$PROJECT_DIR$/src/com/company/bankskn/setup/TestMain.java" />
         <option value="$PROJECT_DIR$/src/com/company/bankskn/card/GenerateRandomCard.java" />
+        <option value="$PROJECT_DIR$/src/com/company/bankskn/setup/TestMain.java" />
       </list>
     </option>
   </component>
@@ -857,16 +847,16 @@
       <workItem from="1547932269617" duration="5625000" />
       <workItem from="1547937917125" duration="17617000" />
       <workItem from="1547998226135" duration="2775000" />
-      <workItem from="1548001172614" duration="338000" />
+      <workItem from="1548001172614" duration="979000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34391000" />
+    <option name="totallyTimeSpent" value="35032000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="80" y="36" width="2480" height="1404" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -891,7 +881,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36238903" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36238903" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1136,14 +1126,14 @@
         <state relative-caret-position="135">
           <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding>
-            <element signature="e#273#274#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#400#401#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="false" />
+            <element signature="e#306#307#0" expanded="false" />
+            <element signature="e#356#357#0" expanded="false" />
+            <element signature="e#400#401#0" expanded="false" />
+            <element signature="e#431#432#0" expanded="false" />
+            <element signature="e#460#461#0" expanded="false" />
+            <element signature="e#502#503#0" expanded="false" />
+            <element signature="e#538#539#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1246,14 +1236,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/bankskn/logger/LauncherLogger.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/bankskn/setup/TestMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/src.zip!/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -1306,8 +1288,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/bankskn/logger/Logger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+        <state relative-caret-position="570">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/bankskn/setup/TestMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding />
         </state>
       </provider>
