@@ -5,7 +5,6 @@ import com.company.bankskn.card.Card;
 import com.company.bankskn.card.GenerateRandomCard;
 import com.company.bankskn.exceptions.InvalidAccountException;
 import com.company.bankskn.exceptions.LowAccountBalanceException;
-import com.company.bankskn.logger.LauncherLogger;
 import com.company.bankskn.manager.atmManager.Impl.ATMManagerImpl;
 import com.company.bankskn.manager.bankManager.Impl.BankManagerImpl;
 import com.company.bankskn.service.ATMService;
@@ -16,13 +15,6 @@ public class TestMain {
 
     public static void main(String[] args) throws LowAccountBalanceException, InvalidAccountException {
 
-        Thread thread = new Thread(new LauncherLogger());
-        thread.start();
-        try {
-            thread.join();
-        } catch (InterruptedException e) {
-            System.out.println(Thread.class.getName() + " is interrupted.");
-        }
 
         Card card = GenerateRandomCard.getCard();
         System.out.println("----------------------------------------------------");

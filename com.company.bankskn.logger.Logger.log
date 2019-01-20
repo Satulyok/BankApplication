@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-01-20T20:07:50</date>
+  <millis>1548000470863</millis>
+  <sequence>1</sequence>
+  <logger>com.company.bankskn.logger.Logger</logger>
+  <level>INFO</level>
+  <class>com.company.bankskn.logger.Logger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Transaction was successful!</message>
+</record>
+</log>

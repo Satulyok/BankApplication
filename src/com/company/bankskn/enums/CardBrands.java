@@ -1,5 +1,7 @@
 package com.company.bankskn.enums;
 
 public enum CardBrands {
-    VISA, MASTER, AMEX
+    VISA,
+    MASTER,
+    AMEX
 }

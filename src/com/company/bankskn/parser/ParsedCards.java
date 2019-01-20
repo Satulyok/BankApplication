@@ -32,7 +32,7 @@ public class ParsedCards {
         try {
             documentBuilder = documentBuilderFactory.newDocumentBuilder();
             document = documentBuilder.parse(
-                    new File("/home/satenik/Desktop/BankSKN/src/com/company/bankskn/resources/cards.xml"));
+                    new File("src/com/company/bankskn/resources/cards.xml"));
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         }

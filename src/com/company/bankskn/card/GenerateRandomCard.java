@@ -6,11 +6,10 @@ package com.company.bankskn.card;
  */
 
 
-import com.company.bankskn.logger.LauncherLogger;
+import com.company.bankskn.logger.Logger;
 import com.company.bankskn.models.Account;
 import com.company.bankskn.parser.ParsedCards;
 
-import java.io.IOException;
 import java.util.*;
 
 public class GenerateRandomCard {
@@ -24,7 +23,7 @@ public class GenerateRandomCard {
         Card card = cardList.get(index);
 
         try {
-            LauncherLogger.launcherLogMessage();
+            Logger.logMessage("getting card..");
         } catch (Exception e) {
             e.printStackTrace();
         }

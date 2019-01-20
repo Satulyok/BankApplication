@@ -4,7 +4,7 @@ import com.company.bankskn.card.Card;
 import com.company.bankskn.exceptions.InvalidAccountException;
 import com.company.bankskn.exceptions.LowATMBalanceException;
 import com.company.bankskn.exceptions.LowAccountBalanceException;
-import com.company.bankskn.logger.AccountLogger;
+import com.company.bankskn.logger.Logger;
 import com.company.bankskn.manager.atmManager.Impl.ATMManagerImpl;
 import com.company.bankskn.manager.bankManager.Impl.BankManagerImpl;
 import com.company.bankskn.models.ATM;
@@ -27,7 +27,7 @@ public class ATMService {
             if (bankManagerImpl.isGetMoney(card, amount)) {
                 if (atmManagerImpl.checkATMBalance(atm, amount)) {
                     atmManagerImpl.reduceATMBalance(atm, amount);
-                    AccountLogger.accountLogMessage();
+                    Logger.logMessage("Transaction was successful!");
                     return amount;
                 }
                 else {
