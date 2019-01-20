@@ -10,11 +10,12 @@ import com.company.bankskn.logger.Logger;
 import com.company.bankskn.models.Account;
 import com.company.bankskn.parser.ParsedCards;
 
+import java.io.IOException;
 import java.util.*;
 
 public class GenerateRandomCard {
 
-    public static Card getCard() {
+    public static Card getCard() throws IOException {
 
         List<Card> cardList = new ArrayList();
         cardList.addAll(new ParsedCards().cards());
@@ -27,13 +28,13 @@ public class GenerateRandomCard {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("Random generated card");
-        System.out.println("CardHolder's name: " + card.getCardHolder());
-        System.out.println("Card number is: " + card.getCardNumber());
+        Logger.logMessage("Random generated card");
+        Logger.logMessage("CardHolder's name: " + card.getCardHolder());
+        Logger.logMessage("Card number is: " + card.getCardNumber());
         Iterator<Account> accountItr = card.getIssuerBank().getBankCustomerAccount().get(card.getCardHolder()).iterator();
         while (accountItr.hasNext()) {
             Account accountBalance = accountItr.next();
-            System.out.println("Account balance is: " + accountBalance.getAmount() + " " + card.getCurrency());
+            Logger.logMessage("Account balance is: " + accountBalance.getAmount() + " " + card.getCurrency());
         }
         return card;
     }
