@@ -22,7 +22,7 @@ public class BankManagerImpl implements BankManager {
     }
 
     @Override
-    public long withrawFromAccount(Card card, long amount) throws LowAccountBalanceException, InvalidAccountException {
+    public long withdrawFromAccount(Card card, long amount) throws LowAccountBalanceException, InvalidAccountException {
         return card.getIssuerBank().withrawFromAccount(card, amount);
     }
 }

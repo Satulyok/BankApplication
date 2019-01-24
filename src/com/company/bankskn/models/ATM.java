@@ -8,7 +8,7 @@ public class ATM {
         return balance;
     }
 
-    public long withraw(long amount) {
+    public long withdraw(long amount) {
         balance -= amount;
         return balance;
     }

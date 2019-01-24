@@ -72,7 +72,7 @@ public class ParsedCards {
                 Bank bank = card.getIssuerBank();
                 bank.getBankCustomerAccount().put(card.getCardHolder(),
                         new HashSet(Arrays.asList(new Account(card.getCardNumber(), (long) (Math.random() * 10000)))));
-                // System.out.println("bank" + bank);
+                System.out.println("bank" + bank);
             }
         }
 

@@ -27,7 +27,7 @@ public class ATMService {
         try {
             if (bankManagerImpl.isGetMoney(card, amount)) {
                 if (atmManagerImpl.checkATMBalance(atm, amount)) {
-                    bankManagerImpl.withrawFromAccount(card,amount);
+                    bankManagerImpl.withdrawFromAccount(card,amount);
                     atmManagerImpl.withdrawFromATM(atm, amount);
                     Logger.logMessage("Transaction was successful!");
                     return bankManagerImpl.getBalance(card);

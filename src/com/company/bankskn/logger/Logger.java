@@ -16,7 +16,7 @@ public class Logger {
 
     public static synchronized void logMessage(String str) throws IOException {
         LOGGER.log(Level.INFO, str);
-        FileHandler fileHandler = new FileHandler(Logger.class.getName() + ".log");
-        LOGGER.addHandler(fileHandler);
+//        FileHandler fileHandler = new FileHandler(Logger.class.getName() + ".log");
+//        LOGGER.addHandler(fileHandler);
     }
 }

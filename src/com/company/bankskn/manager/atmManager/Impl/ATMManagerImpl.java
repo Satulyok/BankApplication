@@ -15,7 +15,7 @@ public class ATMManagerImpl implements ATMManager {
 
     @Override
     public long withdrawFromATM(ATM atm, long amount) throws LowATMBalanceException {
-        long atmNewBalance = atm.withraw(amount);
+        long atmNewBalance = atm.withdraw(amount);
         return atmNewBalance;
     }
 }

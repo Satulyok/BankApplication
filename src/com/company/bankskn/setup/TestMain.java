@@ -15,7 +15,8 @@ import java.util.InputMismatchException;
 public class TestMain {
 
     public static void main(String[] args) throws LowAccountBalanceException, InvalidAccountException, IOException {
-        Card card = GenerateRandomCard.getCard();
+        Card card1 = GenerateRandomCard.getCard();
+        Card card2 = GenerateRandomCard.getCard();
         System.out.println("----------------------------------------------------");
         ATMService atmService = new ATMService(new BankManagerImpl(), new ATMManagerImpl());
         java.util.Scanner input = new java.util.Scanner(System.in);
@@ -33,7 +34,7 @@ public class TestMain {
                         while (true)
                         {
                             System.out.println("Withdrawing money from second Thread");
-                            long newAmount = atmService.withdrawSecond(card, amountToWithdraw);
+                            long newAmount = atmService.withdrawSecond(card1, amountToWithdraw);
                             System.out.println("(Second Thread)Balance in your account is:  " + newAmount);
                             if(newAmount == 0)
                                 break;
@@ -55,7 +56,7 @@ public class TestMain {
                         while (true)
                         {
                             System.out.println("Withdrawing money from first Thread");
-                            long newAmount = atmService.withdrawFirst(card, amountToWithdraw);
+                            long newAmount = atmService.withdrawFirst(card2, amountToWithdraw);
                             System.out.println("(First Thread)Balance in your account is:  " + newAmount);
                             if(newAmount == 0)
                                 break;
