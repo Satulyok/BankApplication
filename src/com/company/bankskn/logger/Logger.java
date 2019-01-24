@@ -2,8 +2,7 @@ package com.company.bankskn.logger;
 
 
 /**
- * Logger class for printing account balance information
- * after transaction.
+ * Logger class for printing any information during and after transaction.
  */
 
 import java.io.IOException;
@@ -16,7 +15,7 @@ public class Logger {
 
     public static synchronized void logMessage(String str) throws IOException {
         LOGGER.log(Level.INFO, str);
-//        FileHandler fileHandler = new FileHandler(Logger.class.getName() + ".log");
-//        LOGGER.addHandler(fileHandler);
+        FileHandler fileHandler = new FileHandler(Logger.class.getName() + ".log");
+        LOGGER.addHandler(fileHandler);
     }
 }

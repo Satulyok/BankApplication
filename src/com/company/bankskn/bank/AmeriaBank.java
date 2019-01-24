@@ -3,7 +3,7 @@ package com.company.bankskn.bank;
 import java.util.HashMap;
 
 /**
- * Singleton class
+ * This class is the Singleton class, which is extends abstract Bank class.
  */
 public class AmeriaBank extends Bank {
 

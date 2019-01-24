@@ -8,7 +8,7 @@ package com.company.bankskn.card;
 
 import com.company.bankskn.logger.Logger;
 import com.company.bankskn.models.Account;
-import com.company.bankskn.parser.ParsedCards;
+import com.company.bankskn.parser.ParseCards;
 
 import java.io.IOException;
 import java.util.*;
@@ -18,7 +18,7 @@ public class GenerateRandomCard {
     public static Card getCard() throws IOException {
 
         List<Card> cardList = new ArrayList();
-        cardList.addAll(new ParsedCards().cards());
+        cardList.addAll(new ParseCards().cards());
 
         int index = (int) (Math.random() * cardList.size());
         Card card = cardList.get(index);

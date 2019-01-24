@@ -3,7 +3,7 @@ package com.company.bankskn.bank;
 import java.util.HashMap;
 
 /**
- * Singleton class
+ * This class is the Singleton class, which is extends abstract Bank class.
  */
 public class HSBCBank extends Bank {
 
@@ -13,9 +13,9 @@ public class HSBCBank extends Bank {
     private static HSBCBank hsbcBank;
 
     public static HSBCBank getInstance() {
-        if(hsbcBank==null) {
+        if (hsbcBank == null) {
             hsbcBank = new HSBCBank();
-            hsbcBank.bankCustomerAccount =new HashMap<>();
+            hsbcBank.bankCustomerAccount = new HashMap<>();
         }
         return hsbcBank;
     }

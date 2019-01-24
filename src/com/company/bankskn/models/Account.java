@@ -1,5 +1,8 @@
 package com.company.bankskn.models;
 
+/**
+ * This class represents account of bank customers.
+ */
 public class Account {
     private long cardNumber;
     private long amount;

@@ -18,14 +18,12 @@ public class TestMain {
 
     public static void main(String[] args) throws LowAccountBalanceException, InvalidAccountException, IOException {
         List<Card> cards = new ArrayList<>();
-        while(true)
-        {
+        while (true) {
             Card card1 = GenerateRandomCard.getCard();
             Card card2 = GenerateRandomCard.getCard();
-            if(card2.getCardNumber() == card1.getCardNumber()) {
+            if (card2.getCardNumber() == card1.getCardNumber()) {
                 continue;
-            }
-            else {
+            } else {
                 cards.add(card1);
                 cards.add(card2);
                 break;
@@ -44,50 +42,41 @@ public class TestMain {
 
             System.out.println("Please enter the amount to withdraw from second card:");
             Integer amountToWithdraw2 = input.nextInt();
-            Thread t1 = new Thread(new Runnable()
-            {
+            Thread t1 = new Thread(new Runnable() {
                 @Override
-                public void run()
-                {
-                    try
-                    {
-                        while (true)
-                        {
+                public void run() {
+                    try {
+                        while (true) {
                             System.out.println("Withdrawing money from first Card");
                             long res = atmService.withdrawFirst(cards.get(0), amountToWithdraw1);
                             System.out.println("(First Card)Balance in your account is:  " + cards.get(0).getIssuerBank().getInitialBankBalance(cards.get(0)));
-                            if(res == 0)
+                            if (res == 0)
                                 break;
                         }
-                    }catch (InterruptedException e) {
+                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
             });
 
-            Thread t2 = new Thread(new Runnable()
-            {
+            Thread t2 = new Thread(new Runnable() {
                 @Override
-                public void run()
-                {
-                    try
-                    {
-                        while (true)
-                        {
+                public void run() {
+                    try {
+                        while (true) {
                             System.out.println("Withdrawing money from second Card");
                             long res = atmService.withdrawSecond(cards.get(1), amountToWithdraw2);
                             System.out.println("(First Card)Balance in your account is:  " + cards.get(1).getIssuerBank().getInitialBankBalance(cards.get(1)));
-                            if(res == 0)
+                            if (res == 0)
                                 break;
                         }
-                    }
-                    catch (InterruptedException e) {
+                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
             });
 
-            // Start both threads
+
             t1.start();
             t2.start();
 

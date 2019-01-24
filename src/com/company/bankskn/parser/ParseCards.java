@@ -21,9 +21,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class ParsedCards {
+public class ParseCards {
 
-    public List<Card> cards()  {
+    public List<Card> cards() {
         List<Card> cardList = new ArrayList<>();
 
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();

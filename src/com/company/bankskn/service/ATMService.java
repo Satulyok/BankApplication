@@ -18,21 +18,27 @@ public class ATMService {
     private ATM atm = new ATM();
     private volatile boolean isFinished = true;
 
-    public ATMService (BankManagerImpl bankManagerImpl, ATMManagerImpl atmManagerImpl) {
+    public ATMService(BankManagerImpl bankManagerImpl, ATMManagerImpl atmManagerImpl) {
         this.bankManagerImpl = bankManagerImpl;
         this.atmManagerImpl = atmManagerImpl;
     }
 
+    /**
+     * Getting bank account balance, after required checkings.
+     *
+     * @param card
+     * @param amount
+     * @return
+     */
     public long withdraw(Card card, long amount) {
         try {
             if (bankManagerImpl.isGetMoney(card, amount)) {
                 if (atmManagerImpl.checkATMBalance(atm, amount)) {
-                    bankManagerImpl.withdrawFromAccount(card,amount);
+                    bankManagerImpl.withdrawFromAccount(card, amount);
                     atmManagerImpl.withdrawFromATM(atm, amount);
                     Logger.logMessage("Transaction was successful!");
                     return bankManagerImpl.getBalance(card);
-                }
-                else {
+                } else {
                     throw new LowATMBalanceException("Low ATM Balance!");
                 }
             } else {
@@ -50,12 +56,19 @@ public class ATMService {
         return 0;
     }
 
+    /**
+     * Withdrawing from first card.
+     *
+     * @param card
+     * @param amount
+     * @return
+     * @throws InterruptedException
+     */
     public long withdrawFirst(Card card, long amount) throws InterruptedException {
-        synchronized (this)
-        {
+        synchronized (this) {
             while (isFinished)
                 wait();
-            long a = withdraw(card,amount);
+            long a = withdraw(card, amount);
 
             Thread.sleep(1000);
             isFinished = true;
@@ -64,12 +77,19 @@ public class ATMService {
         }
     }
 
+    /**
+     * Withdrawing from second card.
+     *
+     * @param card
+     * @param amount
+     * @return
+     * @throws InterruptedException
+     */
     public long withdrawSecond(Card card, long amount) throws InterruptedException {
-        synchronized (this)
-        {
+        synchronized (this) {
             while (!isFinished)
                 wait();
-            long a = withdraw(card,amount);
+            long a = withdraw(card, amount);
 
             Thread.sleep(1000);
             isFinished = false;

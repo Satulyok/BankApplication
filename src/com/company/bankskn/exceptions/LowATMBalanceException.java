@@ -1,9 +1,8 @@
 package com.company.bankskn.exceptions;
 
 /**
- * exceptions thrown to indicate that there is insufficient
- * balance in ATM.
- * @author me
+ * Exceptions thrown to indicate that there is not enough balance in ATM
+ * to get required amount of money.
  */
 
 public class LowATMBalanceException extends Exception {
