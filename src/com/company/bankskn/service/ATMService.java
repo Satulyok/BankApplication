@@ -16,7 +16,7 @@ public class ATMService {
     private BankManagerImpl bankManagerImpl;
     private ATMManagerImpl atmManagerImpl;
     private ATM atm = new ATM();
-    private boolean isFinished = true;
+    private volatile boolean isFinished = true;
 
     public ATMService (BankManagerImpl bankManagerImpl, ATMManagerImpl atmManagerImpl) {
         this.bankManagerImpl = bankManagerImpl;
@@ -53,8 +53,6 @@ public class ATMService {
     public long withdrawFirst(Card card, long amount) throws InterruptedException {
         synchronized (this)
         {
-            // producer thread waits while list
-            // is full
             while (isFinished)
                 wait();
             long a = withdraw(card,amount);
@@ -69,8 +67,6 @@ public class ATMService {
     public long withdrawSecond(Card card, long amount) throws InterruptedException {
         synchronized (this)
         {
-            // producer thread waits while list
-            // is full
             while (!isFinished)
                 wait();
             long a = withdraw(card,amount);

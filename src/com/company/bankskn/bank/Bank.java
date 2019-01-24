@@ -34,13 +34,6 @@ public  abstract class Bank {
     }
 
 
-//    public boolean isReduceAmount(Card card, long cash) throws LowAccountBalanceException, InvalidAccountException {
-//        if (checkAccountValidation(this, card) && checkAccountBalance(card, cash)){
-//            return true;
-//        }
-//        return false;
-//    }
-
     public boolean canWithdrawFromCard(Card card, long cash) throws LowAccountBalanceException, InvalidAccountException {
         if (checkAccountValidation(this, card) && checkAccountBalance(card, cash)){
             return true;
@@ -48,22 +41,14 @@ public  abstract class Bank {
         return false;
     }
 
-    public long getReducedBalance(Card card, long cash) throws LowAccountBalanceException, InvalidAccountException {
-        long balance = getInitialBankBalance(card);
-        if (canWithdrawFromCard(card, cash))
-            balance -= cash;
-        return balance;
-    }
-
     public long getInitialBankBalance (Card card) {
-        long balance = 0;
         Iterator<Account> accountItr = this.getBankCustomerAccount().get(card.getCardHolder()).iterator();
         while (accountItr.hasNext()) {
             Account accountBalance = accountItr.next();
-            balance = accountBalance.getAmount();
+            long balance = accountBalance.getAmount();
             return balance;
         }
-        return balance;
+        return 0;
     }
 
     public long withrawFromAccount(Card card, long amount) {
